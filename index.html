@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -13,30 +15,291 @@
     />
 
     <title>Frontend Mentor | Social Media Dashboard</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
+     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #1d2029;
+      color: white;
+    }
+
+    .container {
+      position: relative;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .header {
+      position: relative;
+      top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .main {
+      position: relative;
+      top: 20vh;
+      height: 100%;
+    }
+
+    .footer {
+      position: relative;
+      top: 100%;
+    }
+
+    h2 {
+      position: absolute;
+      top: 20px;
+    }
+
+    .sub {
+      position: absolute;
+      top: 45px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .switch {
+      position: absolute;
+      top: 30px;
+      right: 0px;
+      width: 150px;
+      margin-right: -20px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .switcher {
+      position: absolute;
+      width: 50px;
+      height: 20px;
+      right: 25px;
+      top: -5px;
+      border-radius: 16px;
+
+      background: #ffffff;
+    }
+
+    .switch-circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #1d2029;
+    }
+
+    .big-card-container,
+    .small-card-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .big-card,
+    .small-card {
+      position: relative;
+      background-color: #252b43;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .big-card {
+      height: 150px;
+      margin-bottom: 1.5rem;
+    }
+
+    .small-card {
+      height: 90px;
+      margin-top: 1rem;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .social {
+      position: absolute;
+      top: 10%;
+      font-size: 10px;
+      font-weight: 100;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .middle {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .minor {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.5);
+      top: 60%;
+      transform: translateX(-15%);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 10%;
+      color: hsl(163, 72%, 41%);
+      font-size: 10px;
+    }
+
+    .name {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.5);
+      top: 15px;
+      left: 20px;
+      font-size: 10px;
+    }
+
+    .big {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .count {
+      position: absolute;
+      bottom: 15px;
+      right: 20px;
+      font-size: 8px;
+      color: hsl(163, 72%, 41%);
+    }
+
+    .red {
+      color: hsl(356, 69%, 56%);
+    }
+
+    @media only screen and (min-width: 380px) {
+      .big-card {
+        flex-basis: 24%;
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+      .small-card {
+        flex-basis: 24%;
       }
-    </style>
+    }
+ </style>
   </head>
   <body>
-    Social Media Dashboard Total Followers: 23,004 Dark Mode @nathanf 1987
-    Followers 12 Today @nathanf 1044 Followers 99 Today @realnathanf 11k
-    Followers 1099 Today Nathan F. 8239 Subscribers 144 Today Overview - Today
-    Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views 52k 1375%
-    Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407 12%
+    <div class="container">
+      <div class="header">
+        <h2>Social Media Dashboard</h2>
+        <p class="sub">Total Followers: 23,004</p>
+        <div class="switch">
+          <p>Dark Mode<div class="switcher"><div class="switch-circle"></div></div></p>
+        </div>
+      </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <div class="main">
+        <div class="big-card-container">
+          <div class="big-card">
+            <p class="social">👍 @nathanf</p>
+            <p class="middle">1987</p>
+            <p class="minor">Followers</p>
+            <p class="bottom">12 Today</p>
+          </div>
+          <div class="big-card">
+            <p class="social">👍 @nathanf</p>
+            <p class="middle">1044</p>
+            <p class="minor">Followers</p>
+            <p class="bottom">99 Today</p>
+          </div>
+          <div class="big-card">
+            <p class="social">👍 @realnathanf</p>
+            <p class="middle">1099</p>
+            <p class="minor">Followers</p>
+            <p class="bottom">1099 Today</p>
+          </div>
+          <div class="big-card">
+            <p class="social">👍 Nathan F.</p>
+            <p class="middle">8239</p>
+            <p class="minor">Subscribers</p>
+            <p class="bottom red">144 Today</p>
+          </div>
+        </div>
+
+        <section class="overview">Overview - Today</section>
+
+        <div class="small-card-container">
+          <div class="small-card">
+            <p class="name">Page Views</p>
+            <p class="big">87</p>
+            <p class="count">3%</p>
+          </div>
+          <div class="small-card">
+            <p class="name">Likes</p>
+            <p class="big">52</p>
+            <p class="count red">2%</p>
+          </div>
+          <div class="small-card">
+            <p class="name">Likes</p>
+            <p class="big">5462</p>
+            <p class="count">2257%</p>
+          </div>
+          <div class="small-card">
+            <p class="name">Profile Views</p>
+            <p class="big">52k</p>
+            <p class="count">1375%</p>
+          </div>
+          <div class="small-card">
+            <p class="name">Retweets</p>
+            <p class="big">117</p>
+            <p class="count">303%</p>
+          </div>
+          <div class="small-card">
+            <p class="name">Likes</p>
+            <p class="big">507</p>
+            <p class="count">553%</p>
+          </div>
+          <div class="small-card">
+            <p class="name">Likes</p>
+            <p class="big">107</p>
+            <p class="count red">19%</p>
+          </div>
+          <div class="small-card">
+            <p class="name">Total Views</p>
+            <p class="big">1407</p>
+            <p class="count red">12%</p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="attribution">
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/horler408">Abdulazeez Yusuf</a>.
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
