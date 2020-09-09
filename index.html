@@ -55,7 +55,7 @@
 
     h2 {
       position: absolute;
-      top: 20px;
+      top: 10px;
     }
 
     .sub {
@@ -78,20 +78,30 @@
     .switcher {
       position: absolute;
       width: 50px;
-      height: 20px;
+      height: 22px;
       right: 25px;
       top: -5px;
       border-radius: 16px;
-
-      background: #ffffff;
+      padding: 1px;
+      transition: all 300ms ease-in-out;
+      background-image: linear-gradient(to right, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
     }
 
-    .switch-circle {
-      position: absolute;
+    .inner-circle {
       width: 20px;
       height: 20px;
       border-radius: 50%;
       background: #1d2029;
+      transition: all 300ms ease-in-out;
+    }
+
+    /*.switcher.active {
+      background: hsl(230, 22%, 74%);
+    }*/
+
+    .switcher.active > .inner-circle {
+      background: #ffffff;
+      margin-left: 27px;
     }
 
     .big-card-container,
@@ -156,16 +166,17 @@
       position: absolute;
       color: rgba(255, 255, 255, 0.5);
       top: 60%;
-      transform: translateX(-15%);
-      font-size: 12px;
-      margin-top: 2px;
+      font-size: 10px;
+      font-weight: 100;
+      margin-top: 5px;
+      letter-spacing: 5px;
     }
 
     .bottom {
       position: absolute;
       bottom: 10%;
       color: hsl(163, 72%, 41%);
-      font-size: 10px;
+      font-size: 8px;
     }
 
     .name {
@@ -198,10 +209,10 @@
 
     @media only screen and (min-width: 380px) {
       .big-card {
-        flex-basis: 24%;
+        flex-basis: 22%;
       }
       .small-card {
-        flex-basis: 24%;
+        flex-basis: 22%;
       }
     }
  </style>
@@ -212,7 +223,7 @@
         <h2>Social Media Dashboard</h2>
         <p class="sub">Total Followers: 23,004</p>
         <div class="switch">
-          <p>Dark Mode<div class="switcher"><div class="switch-circle"></div></div></p>
+          <p>Dark Mode<div class="switcher" onclick="this.classList.toggle('active')"><div class="inner-circle"></div></div></p>
         </div>
       </div>
 
