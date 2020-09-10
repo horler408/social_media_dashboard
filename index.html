@@ -59,15 +59,16 @@
       top: 100%;
     }
 
-    h2 {
+    .title {
       position: absolute;
       top: 10px;
+      font-size: 0.8rem;
     }
 
     .sub {
       position: absolute;
       top: 45px;
-      font-size: 12px;
+      font-size: 0.6rem;
       color: rgba(255, 255, 255, 0.7);
     }
 
@@ -82,11 +83,11 @@
 
     .switch {
       position: absolute;
-      top: 30px;
-      right: 0px;
+      top: 70px;
+      left: 0px;
       width: 150px;
       margin-right: -20px;
-      font-size: 12px;
+      font-size: 0.6rem;
       color: rgba(255, 255, 255, 0.7);
     }
 
@@ -151,6 +152,8 @@
       height: 150px;
       margin-bottom: 1.5rem;
     }
+
+    
 
     .small-card {
       height: 90px;
@@ -251,6 +254,24 @@
     }
 
     @media only screen and (min-width: 380px) {
+      .header {
+        display: flex;
+      }
+
+      .title {
+        font-size: 1.5em;
+      }
+
+      .sub {
+        font-size: 0.8rem;
+      }
+
+      .switch {
+        top: 30px;
+        left: 80%;
+        font-size: 12px;
+      }
+
       .big-card {
         flex-basis: 22%;
       }
@@ -263,7 +284,7 @@
   <body>
     <div class="container">
       <div class="header">
-        <h2>Social Media Dashboard</h2>
+        <h2 class="title">Social Media Dashboard</h2>
         <p class="sub" id="sub">Total Followers: 23,004</p>
         <div class="switch" id="mode">
           <p><span id="dark-mode-text">Dark Mode</span><span id="light-mode-text">Light Mode</span><div class="switcher" id="switcher"><div class="inner-circle"></div></div></p>
@@ -273,28 +294,28 @@
       <div class="main">
         <div class="big-card-container">
           <div class="big-card">
-            <p class="social"><i class="fab fa-facebook" style="color: #339af0;"></i> @nathanf</p>
+            <p class="social"><img src="./images/icon-facebook.svg" height="15px" /> @nathanf</p>
             <p class="middle">1987</p>
             <p class="minor">Followers</p>
-            <p class="bottom">12 Today</p>
+            <p class="bottom"><img src="./images/icon-up.svg" /> 12 Today</p>
           </div>
           <div class="big-card">
-            <p class="social">👍 @nathanf</p>
+            <p class="social"><img src="./images/icon-twitter.svg" height="15px" /> @nathanf</p>
             <p class="middle">1044</p>
             <p class="minor">Followers</p>
-            <p class="bottom">99 Today</p>
+            <p class="bottom"><img src="./images/icon-up.svg" /> 99 Today</p>
           </div>
           <div class="big-card">
-            <p class="social">👍 @realnathanf</p>
+            <p class="social"><img src="./images/icon-instagram.svg" height="15px" /> @realnathanf</p>
             <p class="middle">11k</p>
             <p class="minor">Followers</p>
-            <p class="bottom">1099 Today</p>
+            <p class="bottom"><img src="./images/icon-up.svg" /> 1099 Today</p>
           </div>
           <div class="big-card">
-            <p class="social">👍 Nathan F.</p>
+            <p class="social"><img src="./images/icon-youtube.svg" height="15px" /> Nathan F.</p>
             <p class="middle">8239</p>
             <p class="minor">Subscribers</p>
-            <p class="bottom red">144 Today</p>
+            <p class="bottom red"><img src="./images/icon-down.svg" /> 144 Today</p>
           </div>
         </div>
 
@@ -304,42 +325,42 @@
           <div class="small-card">
             <p class="name">Page Views</p>
             <p class="big">87</p>
-            <p class="count">3%</p>
+            <p class="count"><img src="./images/icon-up.svg" /> 3%</p>
           </div>
           <div class="small-card">
             <p class="name">Likes</p>
             <p class="big">52</p>
-            <p class="count red">2%</p>
+            <p class="count red"><img src="./images/icon-down.svg" /> 2%</p>
           </div>
           <div class="small-card">
             <p class="name">Likes</p>
             <p class="big">5462</p>
-            <p class="count">2257%</p>
+            <p class="count"><img src="./images/icon-up.svg" /> 2257%</p>
           </div>
           <div class="small-card">
             <p class="name">Profile Views</p>
             <p class="big">52k</p>
-            <p class="count">1375%</p>
+            <p class="count"><img src="./images/icon-up.svg" /> 1375%</p>
           </div>
           <div class="small-card">
             <p class="name">Retweets</p>
             <p class="big">117</p>
-            <p class="count">303%</p>
+            <p class="count"><img src="./images/icon-up.svg" /> 303%</p>
           </div>
           <div class="small-card">
             <p class="name">Likes</p>
             <p class="big">507</p>
-            <p class="count">553%</p>
+            <p class="count"><img src="./images/icon-up.svg" /> 553%</p>
           </div>
           <div class="small-card">
             <p class="name">Likes</p>
             <p class="big">107</p>
-            <p class="count red">19%</p>
+            <p class="count red"><img src="./images/icon-down.svg" /> 19%</p>
           </div>
           <div class="small-card">
             <p class="name">Total Views</p>
             <p class="big">1407</p>
-            <p class="count red">12%</p>
+            <p class="count red"><img src="./images/icon-down.svg" /> 12%</p>
           </div>
         </div>
 
