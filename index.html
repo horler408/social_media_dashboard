@@ -28,6 +28,12 @@
       font-family: "Inter", sans-serif;
       background-color: #1d2029;
       color: white;
+      transition: background 0.2s linear;
+    }
+
+    body.light {
+      background: hsl(0, 0%, 100%);
+      color: hsl(230, 17%, 14%);
     }
 
     .container {
@@ -65,6 +71,15 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
+    .sub.light {
+      color: hsl(228, 12%, 44%);
+    }
+
+    .checkbox {
+      opacity: 0;
+      position: absolute;
+    }
+
     .switch {
       position: absolute;
       top: 30px;
@@ -75,6 +90,10 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
+    .switch.light {
+      color: hsl(228, 12%, 44%)
+    }
+
     .switcher {
       position: absolute;
       width: 50px;
@@ -83,6 +102,7 @@
       top: -5px;
       border-radius: 16px;
       padding: 1px;
+      cursor: pointer;
       transition: all 300ms ease-in-out;
       background-image: linear-gradient(to right, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
     }
@@ -100,7 +120,7 @@
     }*/
 
     .switcher.active > .inner-circle {
-      background: #ffffff;
+      background: hsl(225, 100%, 98%);
       margin-left: 27px;
     }
 
@@ -137,6 +157,20 @@
       margin-top: 1rem;
     }
 
+    .big-card:hover, .small-card:hover {
+      background-color: #3e445f
+    }
+
+    .big-card.light, .small-card.light {
+      background: hsl(227, 47%, 96%);
+      color: hsl(230, 17%, 14%);
+    }
+
+    .big-card.light:hover, .small-card.light:hover {
+      background: hsl(230, 22%, 74%);
+      cursor: pointer;
+    }
+
     .attribution {
       font-size: 11px;
       text-align: center;
@@ -151,6 +185,10 @@
       font-size: 10px;
       font-weight: 100;
       color: rgba(255, 255, 255, 0.5);
+    }
+
+    .social.light, .minor.light, .name.light {
+      color: hsl(228, 12%, 44%)
     }
 
     .middle {
@@ -171,6 +209,7 @@
       margin-top: 5px;
       letter-spacing: 5px;
     }
+
 
     .bottom {
       position: absolute;
@@ -207,6 +246,10 @@
       color: hsl(356, 69%, 56%);
     }
 
+    .mode-text {
+      display: none;
+    }
+
     @media only screen and (min-width: 380px) {
       .big-card {
         flex-basis: 22%;
@@ -221,16 +264,16 @@
     <div class="container">
       <div class="header">
         <h2>Social Media Dashboard</h2>
-        <p class="sub">Total Followers: 23,004</p>
-        <div class="switch">
-          <p>Dark Mode<div class="switcher" onclick="this.classList.toggle('active')"><div class="inner-circle"></div></div></p>
+        <p class="sub" id="sub">Total Followers: 23,004</p>
+        <div class="switch" id="mode">
+          <p><span id="dark-mode-text">Dark Mode</span><span id="light-mode-text">Light Mode</span><div class="switcher" id="switcher"><div class="inner-circle"></div></div></p>
         </div>
       </div>
 
       <div class="main">
         <div class="big-card-container">
           <div class="big-card">
-            <p class="social">👍 @nathanf</p>
+            <p class="social"><i class="fab fa-facebook" style="color: #339af0;"></i> @nathanf</p>
             <p class="middle">1987</p>
             <p class="minor">Followers</p>
             <p class="bottom">12 Today</p>
@@ -243,7 +286,7 @@
           </div>
           <div class="big-card">
             <p class="social">👍 @realnathanf</p>
-            <p class="middle">1099</p>
+            <p class="middle">11k</p>
             <p class="minor">Followers</p>
             <p class="bottom">1099 Today</p>
           </div>
@@ -312,5 +355,52 @@
         </div>
       </div>
     </div>
+
+    <script>
+      const switcher = document.getElementById('switcher');
+      const bigCards = document.querySelectorAll('.big-card')
+      const socials = document.querySelectorAll('.social')
+      const minors = document.querySelectorAll('.minor')
+      const smallCards = document.querySelectorAll('.small-card')
+      const names = document.querySelectorAll('.name')
+      const sub = document.getElementById('sub');
+      const mode = document.getElementById('mode');
+      const lightModeText = document.getElementById('light-mode-text')
+      const darkModeText = document.getElementById('dark-mode-text')
+
+      lightModeText.classList.add('mode-text')
+
+      switcher.addEventListener('click', () => {
+        switcher.classList.toggle('active');
+        document.body.classList.toggle("light");
+        sub.classList.toggle('light')
+        mode.classList.toggle('light')
+
+        //Changing the mode text
+        darkModeText.classList.toggle('mode-text')
+        lightModeText.classList.toggle('mode-text')
+        
+
+        //Light Mode colors for big cards
+        bigCards.forEach(bigCard => {
+          bigCard.classList.toggle('light')
+        })
+        socials.forEach(social => {
+          social.classList.toggle('light')
+        })
+        minors.forEach(minor => {
+          minor.classList.toggle('light')
+        })
+
+        //Light Mode Colors for Small cards
+        smallCards.forEach(smallCard => {
+          smallCard.classList.toggle('light')
+        })
+        names.forEach(name => {
+          name.classList.toggle('light')
+        })
+        
+      })
+    </script>
   </body>
 </html>
