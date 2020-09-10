@@ -146,6 +146,7 @@
       text-align: center;
       margin-bottom: 0.5rem;
       border-radius: 5px;
+      transform: transition 2s ease-in-out
     }
 
     .big-card {
@@ -153,15 +154,13 @@
       margin-bottom: 1.5rem;
     }
 
-    
-
     .small-card {
       height: 90px;
       margin-top: 1rem;
     }
 
     .big-card:hover, .small-card:hover {
-      background-color: #3e445f
+      background-color: hsl(229, 29%, 26%);
     }
 
     .big-card.light, .small-card.light {
@@ -259,6 +258,21 @@
       display: none;
     }
 
+    .facebook{
+      border-top: 3px solid hsl(208, 92%, 53%);
+    }
+    .twitter{
+      border-top: 3px solid hsl(203, 89%, 53%);
+    }
+
+    .instagram{
+      border-top: 3px solid hsl(37, 97%, 70%) ;
+    }
+
+    .youtube{
+      border-top: 3px solid hsl(348, 97%, 39%);
+    }
+
     @media only screen and (min-width: 380px) {
       .header {
         display: flex;
@@ -299,26 +313,26 @@
 
       <div class="main">
         <div class="big-card-container">
-          <div class="big-card">
-            <p class="social"><img src="./images/icon-facebook.svg" height="15px" /> @nathanf</p>
+          <div class="big-card facebook">
+            <p class="social"><img src="./images/icon-facebook.svg" height="15px" /> @nloengr</p>
             <p class="middle">1987</p>
             <p class="minor">Followers</p>
             <p class="bottom"><img src="./images/icon-up.svg" /> 12 Today</p>
           </div>
-          <div class="big-card">
-            <p class="social"><img src="./images/icon-twitter.svg" height="15px" /> @nathanf</p>
+          <div class="big-card twitter">
+            <p class="social"><img src="./images/icon-twitter.svg" height="15px" /> @yusuf</p>
             <p class="middle">1044</p>
             <p class="minor">Followers</p>
             <p class="bottom"><img src="./images/icon-up.svg" /> 99 Today</p>
           </div>
-          <div class="big-card">
-            <p class="social"><img src="./images/icon-instagram.svg" height="15px" /> @realnathanf</p>
+          <div class="big-card instagram">
+            <p class="social"><img src="./images/icon-instagram.svg" height="15px" /> @horler408</p>
             <p class="middle">11k</p>
             <p class="minor">Followers</p>
             <p class="bottom"><img src="./images/icon-up.svg" /> 1099 Today</p>
           </div>
-          <div class="big-card">
-            <p class="social"><img src="./images/icon-youtube.svg" height="15px" /> Nathan F.</p>
+          <div class="big-card youtube">
+            <p class="social"><img src="./images/icon-youtube.svg" height="15px" /> HorlerTech.</p>
             <p class="middle">8239</p>
             <p class="minor">Subscribers</p>
             <p class="bottom red"><img src="./images/icon-down.svg" /> 144 Today</p>
@@ -328,49 +342,49 @@
         <section class="overview">Overview - Today</section>
 
         <div class="small-card-container">
-          <div class="small-card">
+          <div class="small-card facebook">
             <p class="name">Page Views</p>
             <p class="big">87</p>
             <img src="./images/icon-facebook.svg" height="15px" class="logo" />
             <p class="count"><img src="./images/icon-up.svg" /> 3%</p>
           </div>
-          <div class="small-card">
+          <div class="small-card facebook">
             <p class="name">Likes</p>
             <p class="big">52</p>
             <img src="./images/icon-facebook.svg" height="15px" class="logo" />
             <p class="count red"><img src="./images/icon-down.svg" /> 2%</p>
           </div>
-          <div class="small-card">
+          <div class="small-card instagram">
             <p class="name">Likes</p>
             <p class="big">5462</p>
             <img src="./images/icon-instagram.svg" height="15px" class="logo" />
             <p class="count"><img src="./images/icon-up.svg" /> 2257%</p>
           </div>
-          <div class="small-card">
+          <div class="small-card instagram">
             <p class="name">Profile Views</p>
             <p class="big">52k</p>
             <img src="./images/icon-instagram.svg" height="15px" class="logo" />
             <p class="count"><img src="./images/icon-up.svg" /> 1375%</p>
           </div>
-          <div class="small-card">
+          <div class="small-card twitter">
             <p class="name">Retweets</p>
             <p class="big">117</p>
             <img src="./images/icon-twitter.svg" height="15px" class="logo" />
             <p class="count"><img src="./images/icon-up.svg" /> 303%</p>
           </div>
-          <div class="small-card">
+          <div class="small-card twitter">
             <p class="name">Likes</p>
             <p class="big">507</p>
             <img src="./images/icon-twitter.svg" height="15px" class="logo" />
             <p class="count"><img src="./images/icon-up.svg" /> 553%</p>
           </div>
-          <div class="small-card">
+          <div class="small-card youtube">
             <p class="name">Likes</p>
             <p class="big">107</p>
             <img src="./images/icon-youtube.svg" height="15px" class="logo" />
             <p class="count red"><img src="./images/icon-down.svg" /> 19%</p>
           </div>
-          <div class="small-card">
+          <div class="small-card youtube">
             <p class="name">Total Views</p>
             <p class="big">1407</p>
             <img src="./images/icon-youtube.svg" height="15px" class="logo" />
